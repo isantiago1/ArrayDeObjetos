@@ -5,7 +5,6 @@ package com.example;
  */
 
 public class App {
-	
 
 	public static void main( String[] args )
 	{
@@ -73,6 +72,46 @@ public class App {
 			}
 		salarioPromedio = suma / totalDePersonas;
 		System.out.println("El Salario promedio de las personas es: " + salarioPromedio);
+		
+		/* Ejercicio nº 2
+		Recorrer  el array de personas y calcular el salario promedio por genero
+		*/
+
+		// Necesitamos 3 variables segun el sexo (hombre, mujer, otro)
+		
+		double sumatoriaSalariosHombre = 0.0;
+		double sumatoriaSalarioMujer = 0.0;
+		double sumatoriaSalarioOtro = 0.0;
+		
+		int totalGeneroHombre = 0;
+		int totalGeneroMujer = 0;
+		int totalGeneroOtro = 0;
+		
+		double salarioPromedioHombres= 0.0;
+		double salarioPromedioMujeres= 0.0;
+		double salarioPromedioOtros= 0.0;
+		
+    	System.out.println("Recorriendo el array de perssonas  ejercicio 2-------------------");
     	
+    	for(Persona p : arrayPersonas) {
+    		if (p.getGenero().equals(Genero.HOMBRE)) {
+    			sumatoriaSalariosHombre += p.getSalario();
+    			totalGeneroHombre++;
+    		} else if  (p.getGenero().equals(Genero.MUJER)) {
+    			sumatoriaSalarioMujer += p.getSalario();
+    			totalGeneroMujer++;
+    		} else {
+    			sumatoriaSalarioOtro += p.getSalario();
+    			totalGeneroOtro++;
+			}
+    		
+    		salarioPromedioHombres = salarioPromedioHombres / totalGeneroHombre;
+    		salarioPromedioMujeres = salarioPromedioMujeres / totalGeneroMujer;
+    		salarioPromedioOtros = salarioPromedioOtros / totalGeneroOtro;
+    		
+    		System.out.println("El Salario promedio de los Hombres es: " + salarioPromedioHombres);
+	        System.out.println("El Salario promedio de las Mujeres es: " + salarioPromedioMujeres);
+	        System.out.println("El Salario promedio de Otros es: " + salarioPromedioOtros);
+    	};		
     }
 }
