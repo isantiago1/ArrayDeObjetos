@@ -32,10 +32,12 @@ public class App {
 			
 			if(object instanceof Persona p) {
 				// Persona p = (Persona) object; // convertir 
+				System.out.println("---------------------");
 				System.out.println("Nombre de la persona: " + p.getNombre());
 				
 			} else if(object instanceof Coche c) {
 				// Coche c = (Coche) object;
+				System.out.println("---------------------");
 				System.out.println("La marca del coche es: " + c.getMarca());
 				System.out.println("El pais del fabricante: " + Coche.paisDelFabricante);
 				

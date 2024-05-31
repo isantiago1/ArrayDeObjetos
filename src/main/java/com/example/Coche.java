@@ -16,3 +16,5 @@ public class Coche {
 	
 	public static final String paisDelFabricante = "Alemania"; // vive en el plano de la Clase, no hace falta crear un objeto
 }
+
+
