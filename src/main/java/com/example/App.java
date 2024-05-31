@@ -28,20 +28,20 @@ public class App {
 			// para lo cual se utiliza el operador instanceof, que comprueba si un objeto es una instancia
 			// de algun tipo
 			
-			if(object instanceof Persona) {
-				Persona p = (Persona) object; // convertir 
+			// CON PATTERN MACHING
+			
+			if(object instanceof Persona p) {
+				// Persona p = (Persona) object; // convertir 
 				System.out.println("Nombre de la persona: " + p.getNombre());
 				
-			} else if(object instanceof Coche) {
-				Coche c = (Coche) object;
+			} else if(object instanceof Coche c) {
+				// Coche c = (Coche) object;
 				System.out.println("La marca del coche es: " + c.getMarca());
 				System.out.println("El pais del fabricante: " + Coche.paisDelFabricante);
 				
 			}
 			
 		}
-		
-		
 		
 	}
 }
